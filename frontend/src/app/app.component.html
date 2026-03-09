@@ -1,0 +1,28 @@
+<div class="app-container" *ngIf="isLoggedIn; else loginTemplate">
+  <aside class="sidebar">
+    <div class="logo" style="display: flex; align-items: center; gap: 12px; padding: 20px 24px;">
+      <img src="/assets/favicon_io/android-chrome-192x192.png" alt="Logo"
+        style="width: 36px; height: 36px; border-radius: 8px;">
+      <h2 style="margin: 0; font-size: 1.25rem;">Sundaram</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
+        <li><a routerLink="/customers" routerLinkActive="active">Customers</a></li>
+        <li><a routerLink="/orders" routerLinkActive="active">Orders</a></li>
+        <li><a routerLink="/points" routerLinkActive="active">Points</a></li>
+        <li><a routerLink="/reports" routerLinkActive="active">Reports</a></li>
+        <li><a routerLink="/backup" routerLinkActive="active">Backup</a></li>
+        <li><a (click)="logout()" class="logout-btn">Logout</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
+</div>
+
+<ng-template #loginTemplate>
+  <router-outlet></router-outlet>
+</ng-template>

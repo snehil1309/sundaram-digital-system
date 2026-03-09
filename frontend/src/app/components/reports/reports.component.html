@@ -1,0 +1,41 @@
+<div>
+    <h1>Reports</h1>
+
+    <div class="card">
+        <h3>Sales Analytics</h3>
+        <div class="flex" style="margin-bottom: 24px;">
+            <button (click)="loadSales('daily')">Daily Revenue</button>
+            <button (click)="loadSales('weekly')">Weekly Revenue</button>
+            <button (click)="loadSales('monthly')">Monthly Revenue</button>
+            <button (click)="loadSales('all')">All-Time Revenue</button>
+        </div>
+        <div *ngIf="salesData" style="font-size: 1.5rem;">
+            <span style="text-transform: capitalize;">{{ salesData.period }}</span> Revenue: <b>₹{{ salesData.revenue
+                }}</b>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Top Customers (By Spending)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Organization</th>
+                    <th>Total Spent</th>
+                    <th>Points Earned</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let c of topCustomers">
+                    <td>{{ c.name }}</td>
+                    <td>{{ c.phone }}</td>
+                    <td>{{ c.customer_type === 'Organization' ? 'Yes' : 'No' }}</td>
+                    <td>₹{{ c.total_spent }}</td>
+                    <td>{{ c.total_points }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

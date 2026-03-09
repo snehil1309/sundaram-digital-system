@@ -1,0 +1,206 @@
+<div>
+  <div class="flex space-between">
+    <h1>Orders</h1>
+    <button (click)="showCreateForm = !showCreateForm">+ Create Order</button>
+  </div>
+
+  <div class="card" *ngIf="showCreateForm">
+    <h3>Create New Order</h3>
+    <form (ngSubmit)="onSubmit()">
+      <div class="grid grid-2">
+        <ng-select
+          [items]="customers"
+          bindLabel="name"
+          bindValue="id"
+          [(ngModel)]="newOrder.customer_id"
+          name="customer_id"
+          placeholder="Select Customer"
+          [searchable]="true"
+          [clearable]="true"
+          required
+          style="width: 100%"
+        >
+          <ng-template ng-label-tmp let-item="item">
+            {{ item.name }} ({{ item.phone }})
+          </ng-template>
+          <ng-template ng-option-tmp let-item="item">
+            {{ item.name }} ({{ item.phone }})
+          </ng-template>
+        </ng-select>
+
+        <div style="grid-column: 1 / -1; margin-top: 12px">
+          <label
+            style="
+              font-weight: 600;
+              margin-bottom: 12px;
+              display: block;
+              color: var(--text-dark);
+            "
+            >Select Service</label
+          >
+          <div class="service-cards">
+            <div
+              class="service-card"
+              *ngFor="let cat of categories"
+              [class.selected]="newOrder.order_category === cat"
+              (click)="selectCategory(cat)"
+            >
+              <h4>{{ cat }}</h4>
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="newOrder.order_category" style="grid-column: 1 / -1">
+          <div class="grid grid-2">
+            <input
+              type="number"
+              [(ngModel)]="newOrder.amount"
+              name="amount"
+              placeholder="Amount (₹)"
+              required
+            />
+          </div>
+          <textarea
+            [(ngModel)]="newOrder.description"
+            name="description"
+            placeholder="Add comments, instructions, or any specifications here..."
+            rows="3"
+            style="margin-top: 16px"
+          ></textarea>
+        </div>
+      </div>
+      <button type="submit">Create Order</button>
+      <button
+        type="button"
+        (click)="showCreateForm = false"
+        style="background: var(--text-light); margin-left: 8px"
+      >
+        Cancel
+      </button>
+    </form>
+  </div>
+
+  <!-- Edit Order Form -->
+  <div class="card" *ngIf="editingOrder">
+    <h3>Edit Order</h3>
+    <form (ngSubmit)="updateOrder()">
+      <div class="grid grid-2">
+        <select
+          [(ngModel)]="editingOrder.customer_id"
+          name="edit_customer_id"
+          required
+          disabled
+        >
+          <option *ngFor="let c of customers" [value]="c.id">
+            {{ c.name }}
+          </option>
+        </select>
+
+        <div style="grid-column: 1 / -1; margin-top: 12px">
+          <label
+            style="
+              font-weight: 600;
+              margin-bottom: 12px;
+              display: block;
+              color: var(--text-dark);
+            "
+            >Select Service</label
+          >
+          <div class="service-cards">
+            <div
+              class="service-card"
+              *ngFor="let cat of categories"
+              [class.selected]="editingOrder.order_category === cat"
+              (click)="editingOrder.order_category = cat"
+            >
+              <h4>{{ cat }}</h4>
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="editingOrder.order_category" style="grid-column: 1 / -1">
+          <div class="grid grid-2">
+            <input
+              type="number"
+              [(ngModel)]="editingOrder.amount"
+              name="edit_amount"
+              placeholder="Amount (₹)"
+              required
+            />
+          </div>
+          <textarea
+            [(ngModel)]="editingOrder.description"
+            name="edit_description"
+            placeholder="Add comments, instructions, or any specifications here..."
+            rows="3"
+            style="margin-top: 16px"
+          ></textarea>
+        </div>
+      </div>
+      <button type="submit">Update Order</button>
+      <button
+        type="button"
+        (click)="cancelEdit()"
+        style="background: var(--text-light); margin-left: 8px"
+      >
+        Cancel
+      </button>
+    </form>
+  </div>
+
+  <div class="card">
+    <div style="margin-bottom: 16px">
+      <select
+        [(ngModel)]="filterCustomerId"
+        (change)="loadOrders()"
+        style="max-width: 300px; margin-bottom: 0"
+      >
+        <option value="">All Customers</option>
+        <option *ngFor="let c of customers" [value]="c.id">{{ c.name }}</option>
+      </select>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Invoice #</th>
+          <th>Date</th>
+          <th>Customer ID</th>
+          <th>Category</th>
+          <th>Amount</th>
+          <th>Points Earned</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let o of orders">
+          <td>{{ o.invoice_number }}</td>
+          <td>{{ o.created_at | date: "short" }}</td>
+          <td>{{ getCustomerName(o.customer_id) }}</td>
+          <td>{{ o.order_category }}</td>
+          <td>₹{{ o.amount }}</td>
+          <td>{{ o.points_earned }}</td>
+          <td>
+            <button
+              (click)="editOrder(o)"
+              style="
+                background: blue;
+                padding: 4px 8px;
+                font-size: 12px;
+                margin-right: 4px;
+              "
+            >
+              Edit
+            </button>
+            <button
+              (click)="deleteOrder(o.id!)"
+              style="background: red; padding: 4px 8px; font-size: 12px"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

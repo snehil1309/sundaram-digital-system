@@ -1,0 +1,60 @@
+<div>
+    <div class="flex space-between">
+        <h1>Customers</h1>
+        <button (click)="showAddForm = !showAddForm">+ Add Customer</button>
+    </div>
+
+    <div class="card" *ngIf="showAddForm">
+        <h3>{{ isEditing ? 'Edit Customer' : 'Add New Customer' }}</h3>
+        <form (ngSubmit)="onSubmit()">
+            <div class="grid grid-2">
+                <input type="text" [(ngModel)]="currentCustomer.name" name="name" placeholder="Name" required>
+                <input type="text" [(ngModel)]="currentCustomer.phone" name="phone" placeholder="Phone Number" required>
+                <input type="email" [(ngModel)]="currentCustomer.email" name="email" placeholder="Email">
+                <input type="text" [(ngModel)]="currentCustomer.address" name="address" placeholder="Address">
+                <select [(ngModel)]="currentCustomer.customer_type" name="type" required>
+                    <option value="Individual">Individual</option>
+                    <option value="Organization">Organization</option>
+                </select>
+            </div>
+            <button type="submit">{{ isEditing ? 'Update' : 'Save' }}</button>
+            <button type="button" (click)="resetForm()"
+                style="background: var(--text-light); margin-left: 8px;">Cancel</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <div style="margin-bottom: 16px;">
+            <input type="text" [(ngModel)]="searchQuery" (input)="onSearch()"
+                placeholder="Search by name, phone, or address..." style="max-width: 400px; margin-bottom: 0;">
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Type</th>
+                    <th>Total Spent</th>
+                    <th>Points</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let c of customers">
+                    <td>{{ c.id }}</td>
+                    <td>{{ c.name }}</td>
+                    <td>{{ c.phone }}</td>
+                    <td>{{ c.customer_type }}</td>
+                    <td>₹{{ c.total_spent }}</td>
+                    <td>{{ c.total_points }}</td>
+                    <td>
+                        <button (click)="editCustomer(c)" style="margin-right: 8px;">Edit</button>
+                        <button class="danger" (click)="deleteCustomer(c.id!)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

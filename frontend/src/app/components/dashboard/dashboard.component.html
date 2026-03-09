@@ -1,0 +1,21 @@
+<div class="dashboard-container">
+  <h1>Dashboard</h1>
+  <div class="grid grid-4">
+    <div class="card">
+      <h3>Total Customers</h3>
+      <h2>{{ stats?.total_customers || 0 }}</h2>
+    </div>
+    <div class="card">
+      <h3>Total Orders</h3>
+      <h2>{{ stats?.total_orders || 0 }}</h2>
+    </div>
+    <div class="card">
+      <h3>Total Revenue</h3>
+      <h2>₹{{ stats?.total_revenue || 0 }}</h2>
+    </div>
+    <div class="card">
+      <h3>Points Issued</h3>
+      <h2>{{ stats?.total_points_issued || 0 }}</h2>
+    </div>
+  </div>
+</div>

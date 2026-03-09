@@ -1,0 +1,24 @@
+<div class="login-container">
+    <div class="login-box">
+        <div style="text-align: center; margin-bottom: 12px;">
+            <img src="/assets/favicon_io/android-chrome-192x192.png" alt="Logo"
+                style="width: 72px; height: 72px; border-radius: 16px; box-shadow: 0 4px 12px rgba(2, 90, 85, 0.2);">
+        </div>
+        <h2 style="text-align: center; color: var(--primary-color)">Sundaram Digital</h2>
+        <p style="text-align: center; margin-bottom: 24px;">Management System Login</p>
+
+        <div *ngIf="error" style="color: red; margin-bottom: 16px;">{{ error }}</div>
+
+        <form (ngSubmit)="onSubmit()">
+            <div>
+                <label>Username</label>
+                <input type="text" [(ngModel)]="username" name="username" required>
+            </div>
+            <div>
+                <label>Password</label>
+                <input type="password" [(ngModel)]="password" name="password" required>
+            </div>
+            <button type="submit" style="width: 100%;">Login</button>
+        </form>
+    </div>
+</div>

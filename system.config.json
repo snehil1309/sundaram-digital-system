@@ -1,0 +1,14 @@
+{
+  "businessName": "Sundaram Digital",
+  "appVersion": "1.0.0",
+  "frontendPort": 4200,
+  "backendPort": 8000,
+  "database": {
+    "type": "sqlite",
+    "name": "database.db"
+  },
+  "pointsSystem": {
+    "minAmountForPoints": 500,
+    "pointsPerTenRupees": 1
+  }
+}
