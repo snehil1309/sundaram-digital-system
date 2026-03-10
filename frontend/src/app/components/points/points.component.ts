@@ -39,7 +39,7 @@ export class PointsComponent implements OnInit {
         this.message = `Successfully redeemed. New Balance: ${res.remaining_balance}`;
         if (customer) {
           const msg = `You have successfully redeemed ${this.redeemData.points_to_redeem} points. Remaining balance in your Sundaram Digital account is ${res.remaining_balance}.`;
-          window.open(`https://wa.me/91${customer.phone}/?text=${encodeURIComponent(msg)}`, '_blank');
+          window.open(`https://api.whatsapp.com/send?phone=91${customer.phone}&text=${encodeURIComponent(msg)}`, '_blank');
         }
         this.redeemData = { customer_id: '', points_to_redeem: null };
         this.loadCustomers(); // refresh points

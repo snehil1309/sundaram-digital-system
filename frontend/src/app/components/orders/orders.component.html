@@ -8,18 +8,9 @@
     <h3>Create New Order</h3>
     <form (ngSubmit)="onSubmit()">
       <div class="grid grid-2">
-        <ng-select
-          [items]="customers"
-          bindLabel="name"
-          bindValue="id"
-          [(ngModel)]="newOrder.customer_id"
-          name="customer_id"
-          placeholder="Select Customer"
-          [searchable]="true"
-          [clearable]="true"
-          required
-          style="width: 100%"
-        >
+        <ng-select [items]="customers" bindLabel="name" bindValue="id" [(ngModel)]="newOrder.customer_id"
+          name="customer_id" placeholder="Select Customer" [searchable]="true" [clearable]="true" required
+          style="width: 100%">
           <ng-template ng-label-tmp let-item="item">
             {{ item.name }} ({{ item.phone }})
           </ng-template>
@@ -29,22 +20,15 @@
         </ng-select>
 
         <div style="grid-column: 1 / -1; margin-top: 12px">
-          <label
-            style="
-              font-weight: 600;
+          <label style="
+              font-weight: 500;
               margin-bottom: 12px;
               display: block;
               color: var(--text-dark);
-            "
-            >Select Service</label
-          >
+            ">Select Service</label>
           <div class="service-cards">
-            <div
-              class="service-card"
-              *ngFor="let cat of categories"
-              [class.selected]="newOrder.order_category === cat"
-              (click)="selectCategory(cat)"
-            >
+            <div class="service-card" *ngFor="let cat of categories" [class.selected]="newOrder.order_category === cat"
+              (click)="selectCategory(cat)">
               <h4>{{ cat }}</h4>
             </div>
           </div>
@@ -52,29 +36,15 @@
 
         <div *ngIf="newOrder.order_category" style="grid-column: 1 / -1">
           <div class="grid grid-2">
-            <input
-              type="number"
-              [(ngModel)]="newOrder.amount"
-              name="amount"
-              placeholder="Amount (₹)"
-              required
-            />
+            <input type="number" [(ngModel)]="newOrder.amount" name="amount" placeholder="Amount (₹)" required />
           </div>
-          <textarea
-            [(ngModel)]="newOrder.description"
-            name="description"
-            placeholder="Add comments, instructions, or any specifications here..."
-            rows="3"
-            style="margin-top: 16px"
-          ></textarea>
+          <textarea [(ngModel)]="newOrder.description" name="description"
+            placeholder="Add comments, instructions, or any specifications here..." rows="3"
+            style="margin-top: 16px"></textarea>
         </div>
       </div>
       <button type="submit">Create Order</button>
-      <button
-        type="button"
-        (click)="showCreateForm = false"
-        style="background: var(--text-light); margin-left: 8px"
-      >
+      <button type="button" class="secondary" (click)="showCreateForm = false" style="margin-left: 12px">
         Cancel
       </button>
     </form>
@@ -85,34 +55,22 @@
     <h3>Edit Order</h3>
     <form (ngSubmit)="updateOrder()">
       <div class="grid grid-2">
-        <select
-          [(ngModel)]="editingOrder.customer_id"
-          name="edit_customer_id"
-          required
-          disabled
-        >
+        <select [(ngModel)]="editingOrder.customer_id" name="edit_customer_id" required disabled>
           <option *ngFor="let c of customers" [value]="c.id">
             {{ c.name }}
           </option>
         </select>
 
         <div style="grid-column: 1 / -1; margin-top: 12px">
-          <label
-            style="
-              font-weight: 600;
+          <label style="
+              font-weight: 500;
               margin-bottom: 12px;
               display: block;
               color: var(--text-dark);
-            "
-            >Select Service</label
-          >
+            ">Select Service</label>
           <div class="service-cards">
-            <div
-              class="service-card"
-              *ngFor="let cat of categories"
-              [class.selected]="editingOrder.order_category === cat"
-              (click)="editingOrder.order_category = cat"
-            >
+            <div class="service-card" *ngFor="let cat of categories"
+              [class.selected]="editingOrder.order_category === cat" (click)="editingOrder.order_category = cat">
               <h4>{{ cat }}</h4>
             </div>
           </div>
@@ -120,29 +78,16 @@
 
         <div *ngIf="editingOrder.order_category" style="grid-column: 1 / -1">
           <div class="grid grid-2">
-            <input
-              type="number"
-              [(ngModel)]="editingOrder.amount"
-              name="edit_amount"
-              placeholder="Amount (₹)"
-              required
-            />
+            <input type="number" [(ngModel)]="editingOrder.amount" name="edit_amount" placeholder="Amount (₹)"
+              required />
           </div>
-          <textarea
-            [(ngModel)]="editingOrder.description"
-            name="edit_description"
-            placeholder="Add comments, instructions, or any specifications here..."
-            rows="3"
-            style="margin-top: 16px"
-          ></textarea>
+          <textarea [(ngModel)]="editingOrder.description" name="edit_description"
+            placeholder="Add comments, instructions, or any specifications here..." rows="3"
+            style="margin-top: 16px"></textarea>
         </div>
       </div>
       <button type="submit">Update Order</button>
-      <button
-        type="button"
-        (click)="cancelEdit()"
-        style="background: var(--text-light); margin-left: 8px"
-      >
+      <button type="button" class="secondary" (click)="cancelEdit()" style="margin-left: 12px">
         Cancel
       </button>
     </form>
@@ -150,11 +95,7 @@
 
   <div class="card">
     <div style="margin-bottom: 16px">
-      <select
-        [(ngModel)]="filterCustomerId"
-        (change)="loadOrders()"
-        style="max-width: 300px; margin-bottom: 0"
-      >
+      <select [(ngModel)]="filterCustomerId" (change)="loadOrders()" style="max-width: 300px; margin-bottom: 0">
         <option value="">All Customers</option>
         <option *ngFor="let c of customers" [value]="c.id">{{ c.name }}</option>
       </select>
@@ -181,21 +122,14 @@
           <td>₹{{ o.amount }}</td>
           <td>{{ o.points_earned }}</td>
           <td>
-            <button
-              (click)="editOrder(o)"
-              style="
-                background: blue;
-                padding: 4px 8px;
-                font-size: 12px;
-                margin-right: 4px;
-              "
-            >
+            <button (click)="editOrder(o)" class="primary" style="
+                padding: 6px 12px;
+                font-size: 0.8rem;
+                margin-right: 8px;
+              ">
               Edit
             </button>
-            <button
-              (click)="deleteOrder(o.id!)"
-              style="background: red; padding: 4px 8px; font-size: 12px"
-            >
+            <button (click)="deleteOrder(o.id!)" class="danger" style="padding: 6px 12px; font-size: 0.8rem">
               Delete
             </button>
           </td>

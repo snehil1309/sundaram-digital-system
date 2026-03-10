@@ -5,7 +5,20 @@
   <meta charset="utf-8">
   <title>Frontend</title>
   <base href="/">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Development CSP (safe for Angular dev server) -->
+  <meta http-equiv="Content-Security-Policy"
+        content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline' 'unsafe-eval';
+        style-src 'self' 'unsafe-inline';
+        img-src 'self' data:;
+        font-src 'self' data:;
+        connect-src 'self' http://localhost:4200 ws://localhost:4200 http://localhost:8000;
+        ">
+
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon_io/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_io/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon_io/favicon-16x16.png">

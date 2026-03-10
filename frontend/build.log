@@ -1,0 +1,586 @@
+- Generating browser application bundles (phase: setup)...
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+
+./node_modules/@ng-select/ng-select/fesm2022/ng-select-ng-select.mjs - Error: Module build failed (from ./node_modules/@angular-devkit/build-angular/src/tools/babel/webpack-loader.js):
+TypeError: Cannot create property 'message' on string 'D:\Sundram\sundaram-digital-system\frontend\node_modules\@ng-select\ng-select\fesm2022\ng-select-ng-select.mjs: This application depends upon a library published using Angular version 21.2.0, which requires Angular version 17.1.0 or newer to work correctly.
+Consider upgrading your application to use a more recent version of Angular.
+  44 |     }
+  45 |     static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "21.2.0", ngImport: i0, type: NgItemLabelDirective, deps: [], target: i0.ɵɵFactoryTarget.Directive }); }
+> 46 |     static { this.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "17.1.0", version: "21.2.0", type: NgItemLabelDirective, isStandalone: true, selector: "[ngItemLabel]", inputs: { ngItemLabel: { classPropertyName: "ngItemLabel", publicName: "ngItemLabel", isSignal: true, isRequired: false, transformFunction: null }, escape: { classPropertyName: "escape", publicName: "escape", isSignal: true, isRequired: false, transformFunction: null } }, ngImport: i0 }); }
+     |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  47 | }
+  48 | i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "21.2.0", ngImport: i0, type: NgItemLabelDirective, decorators: [{
+  49 |             type: Directive,'
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:112:35 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+112     readonly value: _angular_core.InputSignal<any>;
+                                      ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:113:38 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignalWithTransform'.
+
+113     readonly disabled: _angular_core.InputSignalWithTransform<boolean, unknown>;
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:135:47 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+135     readonly ariaLabelDropdown: _angular_core.InputSignal<string>;
+                                                  ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:136:39 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+136     readonly ariaLabel: _angular_core.InputSignal<string>;
+                                          ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:137:39 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignalWithTransform'.
+
+137     readonly markFirst: _angular_core.InputSignalWithTransform<boolean, unknown>;
+                                          ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:138:41 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+138     readonly placeholder: _angular_core.InputSignal<string>;
+                                            ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:139:46 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+139     readonly fixedPlaceholder: _angular_core.InputSignal<boolean>;
+                                                 ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:140:42 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+140     readonly notFoundText: _angular_core.InputSignal<string>;
+                                             ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:141:46 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+141     readonly typeToSearchText: _angular_core.InputSignal<string>;
+                                                 ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:142:55 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+142     readonly preventToggleOnRightClick: _angular_core.InputSignal<boolean>;
+                                                          ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:143:40 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+143     readonly addTagText: _angular_core.InputSignal<string>;
+                                           ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:144:41 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+144     readonly loadingText: _angular_core.InputSignal<string>;
+                                            ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:145:42 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+145     readonly clearAllText: _angular_core.InputSignal<string>;
+                                             ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:146:46 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+146     readonly dropdownPosition: _angular_core.InputSignal<DropdownPosition>;
+                                                 ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:147:38 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+147     readonly appendTo: _angular_core.InputSignal<string>;
+                                         ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:148:47 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+148     readonly outsideClickEvent: _angular_core.InputSignal<"click" | "mousedown">;
+                                                  ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:149:37 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignalWithTransform'.
+
+149     readonly loading: _angular_core.InputSignalWithTransform<boolean, unknown>;
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:150:43 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignalWithTransform'.
+
+150     readonly closeOnSelect: _angular_core.InputSignalWithTransform<boolean, unknown>;
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:151:42 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignalWithTransform'.
+
+151     readonly hideSelected: _angular_core.InputSignalWithTransform<boolean, unknown>;
+                                             ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:152:41 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignalWithTransform'.
+
+152     readonly selectOnTab: _angular_core.InputSignalWithTransform<boolean, unknown>;
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:153:41 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignalWithTransform'.
+
+153     readonly openOnEnter: _angular_core.InputSignalWithTransform<boolean, unknown>;
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:154:46 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignalWithTransform'.
+
+154     readonly maxSelectedItems: _angular_core.InputSignalWithTransform<number, unknown>;
+                                                 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:155:37 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+155     readonly groupBy: _angular_core.InputSignal<string | ((value: any) => any)>;
+                                        ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:156:40 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+156     readonly groupValue: _angular_core.InputSignal<GroupValueFn>;
+                                           ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:157:42 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignalWithTransform'.
+
+157     readonly bufferAmount: _angular_core.InputSignalWithTransform<number, unknown>;
+                                             ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:158:43 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignalWithTransform'.
+
+158     readonly virtualScroll: _angular_core.InputSignalWithTransform<boolean, unknown>;
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:159:45 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignalWithTransform'.
+
+159     readonly selectableGroup: _angular_core.InputSignalWithTransform<boolean, unknown>;
+                                                ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:160:51 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+160     readonly tabFocusOnClearButton: _angular_core.InputSignal<boolean>;
+                                                      ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:161:52 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignalWithTransform'.
+
+161     readonly selectableGroupAsModel: _angular_core.InputSignalWithTransform<boolean, unknown>;
+                                                       ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:162:38 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+162     readonly searchFn: _angular_core.InputSignal<any>;
+                                         ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:163:39 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+163     readonly trackByFn: _angular_core.InputSignal<any>;
+                                          ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:164:46 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignalWithTransform'.
+
+164     readonly clearOnBackspace: _angular_core.InputSignalWithTransform<boolean, unknown>;
+                                                 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:165:40 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+165     readonly labelForId: _angular_core.InputSignal<any>;
+                                           ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:166:40 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+166     readonly inputAttrs: _angular_core.InputSignal<Record<string, string>>;
+                                           ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:167:38 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignalWithTransform'.
+
+167     readonly tabIndex: _angular_core.InputSignalWithTransform<number, unknown>;
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:168:38 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignalWithTransform'.
+
+168     readonly readonly: _angular_core.InputSignalWithTransform<boolean, unknown>;
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:169:50 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignalWithTransform'.
+
+169     readonly searchWhileComposing: _angular_core.InputSignalWithTransform<boolean, unknown>;
+                                                     ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:170:43 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignalWithTransform'.
+
+170     readonly minTermLength: _angular_core.InputSignalWithTransform<number, unknown>;
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:171:48 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignalWithTransform'.
+
+171     readonly editableSearchTerm: _angular_core.InputSignalWithTransform<boolean, unknown>;
+                                                   ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:172:37 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+172     readonly ngClass: _angular_core.InputSignal<any>;
+                                        ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:173:39 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+173     readonly typeahead: _angular_core.InputSignal<Subject<string>>;
+                                          ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:174:38 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignalWithTransform'.
+
+174     readonly multiple: _angular_core.InputSignalWithTransform<boolean, unknown>;
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:175:36 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+175     readonly addTag: _angular_core.InputSignal<boolean | AddTagFn>;
+                                       ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:176:40 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignalWithTransform'.
+
+176     readonly searchable: _angular_core.InputSignalWithTransform<boolean, unknown>;
+                                           ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:177:39 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignalWithTransform'.
+
+177     readonly clearable: _angular_core.InputSignalWithTransform<boolean, unknown>;
+                                          ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:178:55 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignalWithTransform'.
+
+178     readonly clearKeepsDisabledOptions: _angular_core.InputSignalWithTransform<boolean, unknown>;
+                                                          ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:179:45 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+179     readonly deselectOnClick: _angular_core.InputSignal<boolean>;
+                                                ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:180:46 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+180     readonly clearSearchOnAdd: _angular_core.InputSignal<any>;
+                                                 ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:181:41 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignalWithTransform'.
+
+181     readonly compareWith: _angular_core.InputSignalWithTransform<CompareWithFn, CompareWithFn>;
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:182:39 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+182     readonly keyDownFn: _angular_core.InputSignal<(_: KeyboardEvent) => boolean>;
+                                          ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:183:39 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'ModelSignal'.
+
+183     readonly bindLabel: _angular_core.ModelSignal<string>;
+                                          ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:184:39 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'ModelSignal'.
+
+184     readonly bindValue: _angular_core.ModelSignal<string>;
+                                          ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:185:40 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'ModelSignal'.
+
+185     readonly appearance: _angular_core.ModelSignal<string>;
+                                           ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:186:36 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'ModelSignal'.
+
+186     readonly isOpen: _angular_core.ModelSignal<boolean>;
+                                       ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:187:35 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'ModelSignal'.
+
+187     readonly items: _angular_core.ModelSignal<readonly any[]>;
+                                      ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:188:39 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'OutputEmitterRef'.
+
+188     readonly blurEvent: _angular_core.OutputEmitterRef<any>;
+                                          ~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:189:40 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'OutputEmitterRef'.
+
+189     readonly focusEvent: _angular_core.OutputEmitterRef<any>;
+                                           ~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:190:41 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'OutputEmitterRef'.
+
+190     readonly changeEvent: _angular_core.OutputEmitterRef<any>;
+                                            ~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:191:39 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'OutputEmitterRef'.
+
+191     readonly openEvent: _angular_core.OutputEmitterRef<void>;
+                                          ~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:192:40 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'OutputEmitterRef'.
+
+192     readonly closeEvent: _angular_core.OutputEmitterRef<void>;
+                                           ~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:193:41 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'OutputEmitterRef'.
+
+193     readonly searchEvent: _angular_core.OutputEmitterRef<{
+                                            ~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:197:40 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'OutputEmitterRef'.
+
+197     readonly clearEvent: _angular_core.OutputEmitterRef<void>;
+                                           ~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:198:38 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'OutputEmitterRef'.
+
+198     readonly addEvent: _angular_core.OutputEmitterRef<any>;
+                                         ~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:199:41 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'OutputEmitterRef'.
+
+199     readonly removeEvent: _angular_core.OutputEmitterRef<any>;
+                                            ~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:200:36 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'OutputEmitterRef'.
+
+200     readonly scroll: _angular_core.OutputEmitterRef<{
+                                       ~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:204:41 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'OutputEmitterRef'.
+
+204     readonly scrollToEnd: _angular_core.OutputEmitterRef<any>;
+                                            ~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:335:35 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+335     readonly items: _angular_core.InputSignal<NgOption[]>;
+                                      ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:336:40 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignalWithTransform'.
+
+336     readonly showAddTag: _angular_core.InputSignalWithTransform<boolean, unknown>;
+                                           ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:337:40 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+337     readonly markedItem: _angular_core.InputSignal<NgOption>;
+                                           ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:338:38 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+338     readonly position: _angular_core.InputSignal<DropdownPosition>;
+                                         ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:339:38 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+339     readonly appendTo: _angular_core.InputSignal<string>;
+                                         ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:340:42 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+340     readonly bufferAmount: _angular_core.InputSignal<number>;
+                                             ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:341:43 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignalWithTransform'.
+
+341     readonly virtualScroll: _angular_core.InputSignalWithTransform<boolean, unknown>;
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:342:44 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+342     readonly headerTemplate: _angular_core.InputSignal<TemplateRef<any>>;
+                                               ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:343:44 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+343     readonly footerTemplate: _angular_core.InputSignal<TemplateRef<any>>;
+                                               ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:344:41 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+344     readonly filterValue: _angular_core.InputSignal<string>;
+                                            ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:345:47 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+345     readonly ariaLabelDropdown: _angular_core.InputSignal<string>;
+                                                  ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:349:47 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+349     readonly outsideClickEvent: _angular_core.InputSignal<"click" | "mousedown">;
+                                                  ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:350:36 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'OutputEmitterRef'.
+
+350     readonly update: _angular_core.OutputEmitterRef<any[]>;
+                                       ~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:351:36 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'OutputEmitterRef'.
+
+351     readonly scroll: _angular_core.OutputEmitterRef<{
+                                       ~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:355:41 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'OutputEmitterRef'.
+
+355     readonly scrollToEnd: _angular_core.OutputEmitterRef<void>;
+                                            ~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:356:42 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'OutputEmitterRef'.
+
+356     readonly outsideClick: _angular_core.OutputEmitterRef<void>;
+                                             ~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:413:32 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+413     ngItemLabel: _angular_core.InputSignal<string>;
+                                   ~~~~~~~~~~~
+
+
+Error: node_modules/@ng-select/ng-select/types/ng-select-ng-select.d.ts:414:27 - error TS2694: Namespace '"D:/Sundram/sundaram-digital-system/frontend/node_modules/@angular/core/index"' has no exported member 'InputSignal'.
+
+414     escape: _angular_core.InputSignal<boolean>;
+                              ~~~~~~~~~~~
+
+
+Error: src/app/components/orders/orders.component.html:12:12 - error TS2540: Cannot assign to 'items' because it is a read-only property.
+
+12           [items]="customers"
+              ~~~~~
+
+  src/app/components/orders/orders.component.ts:9:16
+    9   templateUrl: './orders.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrdersComponent.
+
+
+Error: src/app/components/orders/orders.component.html:13:11 - error TS2540: Cannot assign to 'bindLabel' because it is a read-only property.
+
+13           bindLabel="name"
+             ~~~~~~~~~
+
+  src/app/components/orders/orders.component.ts:9:16
+    9   templateUrl: './orders.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrdersComponent.
+
+
+Error: src/app/components/orders/orders.component.html:14:11 - error TS2540: Cannot assign to 'bindValue' because it is a read-only property.
+
+14           bindValue="id"
+             ~~~~~~~~~
+
+  src/app/components/orders/orders.component.ts:9:16
+    9   templateUrl: './orders.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrdersComponent.
+
+
+Error: src/app/components/orders/orders.component.html:17:11 - error TS2540: Cannot assign to 'placeholder' because it is a read-only property.
+
+17           placeholder="Select Customer"
+             ~~~~~~~~~~~
+
+  src/app/components/orders/orders.component.ts:9:16
+    9   templateUrl: './orders.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrdersComponent.
+
+
+Error: src/app/components/orders/orders.component.html:18:12 - error TS2540: Cannot assign to 'searchable' because it is a read-only property.
+
+18           [searchable]="true"
+              ~~~~~~~~~~
+
+  src/app/components/orders/orders.component.ts:9:16
+    9   templateUrl: './orders.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrdersComponent.
+
+
+Error: src/app/components/orders/orders.component.html:19:12 - error TS2540: Cannot assign to 'clearable' because it is a read-only property.
+
+19           [clearable]="true"
+              ~~~~~~~~~
+
+  src/app/components/orders/orders.component.ts:9:16
+    9   templateUrl: './orders.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrdersComponent.
+
+
+

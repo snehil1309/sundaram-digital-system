@@ -48,7 +48,7 @@ export class OrdersComponent implements OnInit {
   constructor(
     private orderService: OrderService,
     private customerService: CustomerService,
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.customerService.getCustomers().subscribe((data) => {
@@ -97,7 +97,7 @@ export class OrdersComponent implements OnInit {
       if (c && order.points_earned! > 0) {
         const msg = `Congratulations you have earned ${order.points_earned} points in your Sundaram Digital account. You can redeem these points on your next order.`;
         window.open(
-          `https://wa.me/91${c.phone}/?text=${encodeURIComponent(msg)}`,
+          `https://api.whatsapp.com/send?phone=91${c.phone}&text=${encodeURIComponent(msg)}`,
           '_blank',
         );
       }
