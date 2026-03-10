@@ -26,12 +26,12 @@ import { LoginComponent } from './components/login/login.component';
     LoginComponent,
   ],
   imports: [
+    NgSelectModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    NgSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
