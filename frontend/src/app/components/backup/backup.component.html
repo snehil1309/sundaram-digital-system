@@ -1,0 +1,20 @@
+<div>
+  <div class="flex space-between">
+    <h1>Database Backup</h1>
+  </div>
+
+  <div class="card">
+    <p>Click the button below to create a backup of the database. The backup file will be saved in the <code>backup/</code> folder on the server.</p>
+
+    <button (click)="createBackup()" [disabled]="isLoading">
+      <span *ngIf="!isLoading">Create Backup</span>
+      <span *ngIf="isLoading">Creating Backup...</span>
+    </button>
+
+    <div *ngIf="message" style="margin-top: 16px; padding: 12px; border-radius: 6px;"
+      [style.background]="isError ? '#fee2e2' : '#d1fae5'"
+      [style.color]="isError ? '#991b1b' : '#065f46'">
+      {{ message }}
+    </div>
+  </div>
+</div>
