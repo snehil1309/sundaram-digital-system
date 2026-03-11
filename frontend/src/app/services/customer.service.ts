@@ -18,7 +18,7 @@ export interface Customer {
   providedIn: 'root'
 })
 export class CustomerService {
-  private apiUrl = 'http://localhost:8000/api';
+  private apiUrl = 'https://sundaram-digital-system.onrender.com/api';
 
   constructor(private http: HttpClient) { }
 

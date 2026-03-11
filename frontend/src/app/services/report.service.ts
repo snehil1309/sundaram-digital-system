@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
     providedIn: 'root'
 })
 export class ReportService {
-    private apiUrl = 'http://localhost:8000/api/reports';
+    private apiUrl = 'https://sundaram-digital-system.onrender.com/api/reports';
 
     constructor(private http: HttpClient) { }
 

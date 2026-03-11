@@ -7,7 +7,7 @@ import { tap } from 'rxjs/operators';
     providedIn: 'root'
 })
 export class AuthService {
-    private apiUrl = 'http://localhost:8000/api';
+    private apiUrl = 'https://sundaram-digital-system.onrender.com/api';
     private loggedIn = new BehaviorSubject<boolean>(this.hasToken());
 
     constructor(private http: HttpClient) { }

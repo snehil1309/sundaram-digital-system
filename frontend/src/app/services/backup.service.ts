@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
     providedIn: 'root'
 })
 export class BackupService {
-    private apiUrl = 'http://localhost:8000/api';
+    private apiUrl = 'https://sundaram-digital-system.onrender.com/api';
 
     constructor(private http: HttpClient) { }
 
