@@ -2,12 +2,16 @@ from sqlalchemy import create_engine, Column, Integer, String, Float, ForeignKey
 from sqlalchemy.orm import declarative_base, sessionmaker, relationship
 import datetime
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Create database directory if it doesn't exist
 os.makedirs(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "database")), exist_ok=True)
-DATABASE_URL = "sqlite:///" + os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "database", "database.db"))
+default_db_url = "sqlite:///" + os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "database", "database.db"))
+DATABASE_URL = os.getenv("DATABASE_URL", default_db_url)
 
-engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
+engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False} if "sqlite" in DATABASE_URL else {})
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base = declarative_base()
